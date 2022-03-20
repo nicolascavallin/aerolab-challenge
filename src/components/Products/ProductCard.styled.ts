@@ -41,6 +41,6 @@ export const RedeemButton = styled.button`
     background: linear-gradient(102.47deg, #1667d9 -5.34%, #f279f2 106.58%);
   }
   &:active {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 `;

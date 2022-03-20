@@ -4,7 +4,7 @@ const Sort = styled.button`
   background: ${(props: { selected: boolean }) =>
     props.selected
       ? "linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%)"
-      : "#E6F0FF"};
+      : props.theme.colors.brand.light};
   border-radius: 12px;
   padding: 8px 24px;
   width: auto;
@@ -14,10 +14,10 @@ const Sort = styled.button`
     background: ${(props: { selected: boolean }) =>
       props.selected
         ? "linear-gradient(102.47deg, #1667d9 -5.34%, #f279f2 106.58%)"
-        : "#E6F0FFCC"};
+        : props.theme.colors.brand.light2};
   }
   &:active {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 `;
 

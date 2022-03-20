@@ -16,4 +16,14 @@ export const Button = styled.button`
   border: none;
   background: ${(props) => props.theme.colors.brand.light};
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: auto;
+  &:hover {
+    background: ${(props) => props.theme.colors.brand.light2};
+  }
+  &:active {
+    opacity: 0.8;
+  }
 `;

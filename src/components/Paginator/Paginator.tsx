@@ -13,12 +13,16 @@ const Paginator: FC<PaginatorProps> = ({ children }) => {
 
   return (
     <PaginatorWrapper>
-      <Button>-</Button>
+      <Button aria-label="Previous page">
+        <img alt="" src="/chevron-left.svg" />
+      </Button>
       {/* @ts-ignore */}
       <Text color={theme.colors.neutral[600]}>
         Page <Span>1 of 2</Span>
       </Text>
-      <Button>+</Button>
+      <Button aria-label="Next page">
+        <img alt="" src="/chevron-right.svg" />
+      </Button>
     </PaginatorWrapper>
   );
 };
