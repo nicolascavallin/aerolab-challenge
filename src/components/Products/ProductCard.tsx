@@ -48,7 +48,6 @@ const ProductCard: FC<ProductCardProps> = ({ product, index = 0 }) => {
           <ProductName>
             <Text numberOfLines={1}>{product.name}</Text>
             <Text
-              // @ts-ignore
               color={theme.colors.neutral[600]}
               variant="L2-Caps"
               numberOfLines={1}

@@ -38,7 +38,6 @@ const ProductsSection: FC<ProductsSectionProps> = ({ children }) => {
       </Heading>
       <ProductsTopContainer>
         <SelectWrapper>
-          {/* @ts-ignore */}
           <Text color={theme.colors.neutral[600]}>Filter by:</Text>
           <Select onChange={onChangeFilter}>
             {categories.map((cat) => (
@@ -54,7 +53,6 @@ const ProductsSection: FC<ProductsSectionProps> = ({ children }) => {
         </SelectWrapper>
         <Separator />
         <SortWrapper>
-          {/* @ts-ignore */}
           <Text color={theme.colors.neutral[600]}>Sort by:</Text>
           {SortOptions.map((opt) => (
             <Sort
