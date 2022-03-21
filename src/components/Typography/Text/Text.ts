@@ -8,17 +8,14 @@ interface TextProps {
   noLineHeight?: boolean;
 }
 
-const Text = styled.p`
+const Text = styled.p<TextProps>`
   margin: 0px;
   font-family: Montserrat;
-  font-size: ${(props: TextProps) =>
-    props.variant?.includes("L2") ? "14px" : "18px"};
-  text-transform: ${(props: TextProps) =>
+  font-size: ${(props) => (props.variant?.includes("L2") ? "14px" : "18px")};
+  text-transform: ${(props) =>
     props.variant?.includes("Caps") ? "uppercase" : "none"};
-  font-weight: ${(props: TextProps) =>
-    props.variant === "L1-Light" ? "500" : "600"};
-  line-height: ${(props: TextProps) =>
-    props.noLineHeight ? "normal" : "150%"};
+  font-weight: ${(props) => (props.variant === "L1-Light" ? "500" : "600")};
+  line-height: ${(props) => (props.noLineHeight ? "normal" : "150%")};
   letter-spacing: ${(props) => {
     const size = props.variant?.includes("L2") ? 14 : 18;
     let factor = 0;
@@ -35,8 +32,7 @@ const Text = styled.p`
   overflow: hidden;
   word-break: break-all;
   @media screen and (max-width: 1024px) {
-    font-size: ${(props: TextProps) =>
-      props.variant?.includes("L2") ? "12px" : "16px"};
+    font-size: ${(props) => (props.variant?.includes("L2") ? "12px" : "16px")};
     letter-spacing: ${(props) => {
       const size = props.variant?.includes("L2") ? 12 : 16;
       let factor = 0;

@@ -7,7 +7,7 @@ import { Button, PaginatorWrapper } from "./Paginator.styled";
 
 interface PaginatorProps {}
 
-const Paginator: FC<PaginatorProps> = ({ children }) => {
+const Paginator: FC<PaginatorProps> = ({}) => {
   //
   const theme = useTheme();
 

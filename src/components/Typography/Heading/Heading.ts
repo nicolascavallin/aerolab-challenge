@@ -6,9 +6,9 @@ interface HeadingProps {
   variant?: Variant;
 }
 
-const Heading = styled.h1`
+const Heading = styled.h1<HeadingProps>`
   font-family: Montserrat;
-  font-size: ${(props: HeadingProps) => {
+  font-size: ${(props) => {
     switch (props.variant) {
       case "L2":
         return "48px";
@@ -19,7 +19,7 @@ const Heading = styled.h1`
     }
   }};
   text-transform: uppercase;
-  line-height: ${(props: HeadingProps) => {
+  line-height: ${(props) => {
     switch (props.variant) {
       case "L3":
         return "100%";
@@ -32,7 +32,7 @@ const Heading = styled.h1`
   color: ${(props) =>
     props.color ? props.color : props.theme.colors.neutral[900]};
   @media screen and (max-width: 1024px) {
-    font-size: ${(props: HeadingProps) => {
+    font-size: ${(props) => {
       switch (props.variant) {
         case "L2":
           return "32px";
